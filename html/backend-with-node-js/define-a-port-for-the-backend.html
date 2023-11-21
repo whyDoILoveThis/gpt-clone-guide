@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Define a Port for the Backend</title>
+  </head>
+  <body>
+    <article class="main-wrap">
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <aside class="nav-wrap">
+        <div class="nav box glass">
+          <header class="site-logo">GPT Clone Guide</header>
+          <ul class="nav__list">
+            <!--~-->
+            <!--* HOME BTN -->
+            <!--^-->
+            <a href="/index.html">
+              <li class="nav__list-item icon-wrap home-icon-wrap">
+                <img
+                  src="/img/icons/icon--home.png"
+                  alt=""
+                  class="icon home-icon"
+                />
+              </li>
+            </a>
+            <!--~-->
+            <!--* BACK BTN -->
+            <!--^-->
+            <a href="backend-with-node-js.html">
+              <li class="nav__list-item icon-wrap back-icon-wrap">
+                <img
+                  src="/img/icons/icon--back.PNG"
+                  alt=""
+                  class="icon back-icon"
+                />
+              </li>
+            </a>
+          </ul>
+        </div>
+      </aside>
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <section class="content-area box glass">
+        <div class="content">
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+          <h1>Define a Port for the Backend</h1>
+          <!--topic-->
+          <h2>The Setup</h2>
+          <h3 class="grn">
+            We're gonna run our backend on port 8000. We also need to go ahead
+            and require the packages that we just installed.
+          </h3>
+          <div class="box">
+            <h4>So add this to server.js...</h4>
+            <img
+              src="../../img/backend-with-node-js/define-a-port-for-the-backend/define-port-and-require-corrs-and-expre.PNG"
+              alt=""
+            />
+          </div>
+          <h3>So, we've got the express package we saved as const express.</h3>
+          <h3>
+            Now we realease everything by calling it with parethesis, and save
+            it to an app const. This is so that we can use it throughout our
+            code.
+          </h3>
+          <div class="box">
+            <h4>So add this line...</h4>
+            <img
+              src="../../img/backend-with-node-js/define-a-port-for-the-backend/const-app.PNG"
+              alt=""
+            />
+          </div>
+          <h3>
+            Also, I know we are going to use json, so go ahead and use
+            express.json()
+          </h3>
+          <div class="box">
+            <h4>Add a line for using express json...</h4>
+            <img
+              src="../../img/backend-with-node-js/define-a-port-for-the-backend/express-json.PNG"
+              alt=""
+            />
+          </div>
+          <h3>
+            I also am forseeing cors erros, so we should go ahead and use cors()
+          </h3>
+          <div class="box">
+            <h4>So we app.use cors()...</h4>
+            <img
+              src="../../img/backend-with-node-js/define-a-port-for-the-backend/use-cors.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">Great! Thats the setup.</h3>
+          <h3>Now we need to listen to the port we defined.</h3>
+          <h2>Listen to the Port</h2>
+          <h3>
+            What we do is listen out on PORT, and we'll just write a message. We
+            make it a callback function, where PORT is the first parameter, and
+            the console.log is the second parameter.
+          </h3>
+          <div class="box">
+            <h4>So call app.listen and add the parameters...</h4>
+            <img
+              src="../../img/backend-with-node-js/define-a-port-for-the-backend/app-listen.PNG"
+              alt=""
+            />
+            <h4>
+              You see that I console logged 'hi', and nodemon picked up both
+              changes...
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/define-a-port-for-the-backend/notice-the-changes.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">
+            It says 8001 because I had another local host running for a
+            different project.
+          </h3>
+          <h3>
+            Thats all it takes to define a port. In the next lesson we are going
+            to grab an API key from openAI and implement it to this project.
+          </h3>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+        </div>
+      </section>
+    </article>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>
