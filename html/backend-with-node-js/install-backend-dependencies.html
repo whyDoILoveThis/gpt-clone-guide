@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Install Backend Dependencies and Start the Servers</title>
+  </head>
+  <body>
+    <article class="main-wrap">
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <aside class="nav-wrap">
+        <div class="nav box glass">
+          <header class="site-logo">GPT Clone Guide</header>
+          <ul class="nav__list">
+            <!--~-->
+            <!--* HOME BTN -->
+            <!--^-->
+            <a href="/index.html">
+              <li class="nav__list-item icon-wrap home-icon-wrap">
+                <img
+                  src="/img/icons/icon--home.png"
+                  alt=""
+                  class="icon home-icon"
+                />
+              </li>
+            </a>
+            <!--~-->
+            <!--* BACK BTN -->
+            <!--^-->
+            <a href="backend-with-node-js.html">
+              <li class="nav__list-item icon-wrap back-icon-wrap">
+                <img
+                  src="/img/icons/icon--back.PNG"
+                  alt=""
+                  class="icon back-icon"
+                />
+              </li>
+            </a>
+          </ul>
+        </div>
+      </aside>
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <section class="content-area box glass">
+        <div class="content">
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+          <h1>Install Backend Dependencies and Start the Servers</h1>
+          <!--topic-->
+          <h2>Create Our Backend File</h2>
+          <h3 class="grn">
+            Inside the main project folder, create a file called 'server.js'.
+            This will be our backend
+          </h3>
+          <div class="box">
+            <h4>So create this server.js file...</h4>
+            <img
+              src="../../img/backend-with-node-js/install-backend-dependencies/server-js-create.PNG"
+              alt=""
+            />
+          </div>
+          <h2>Install the Dependencies</h2>
+          <h3>We need to install cors, express, and nodemon.</h3>
+          <div class="box">
+            <h4>Run this command in the project terminal...</h4>
+            <div class="code">
+              <p><em class="orng">npm</em> i cors express nodemon</p>
+            </div>
+          </div>
+          <h3 class="red">
+            To avoid version clashes, it's pretty important that you install the
+            same version as I have for this project, incase you are following
+            this in the future.
+          </h3>
+          <div class="box">
+            <h4>These are the verions I have installed now...</h4>
+            <div class="code">
+              <p>
+                <em class="orng">npm</em> i cors@2.8.5 express@4.18.2
+                nodemon@2.0.22
+              </p>
+            </div>
+          </div>
+          <h3 class="red">
+            You should also note that I am using v18.2.0 of react and react-dom,
+            and v5.0.1 of react-scripts.
+          </h3>
+          <h3 class="grn">
+            If you don't know what is cors,
+            <em class="blu"><a href="">here</a></em> is an excellent written
+            explanation of cors, and cors errors.
+          </h3>
+          <h3 class="orng">
+            If you prefer a more visual explanation, here are a couple of
+            videos.
+            <em class="blu"
+              ><a href="https://www.youtube.com/watch?v=4KHiSt0oLJ0"
+                >This one</a
+              ></em
+            >
+
+            is by fireship, and
+            <em class="blu"
+              ><a href="https://www.youtube.com/watch?v=PNtFSVU-YTI"
+                >This one</a
+              ></em
+            >
+            is by WedDevSimplified
+          </h3>
+          <h3>
+            As for nodemon, you will see what it does shortly. If you want to
+            know more about it just google 'nodemon'.
+          </h3>
+          <h2>Write a Script to Start Our Backend</h2>
+          <h3>
+            In the package.json file, change the name of the existing start
+            script, and then create another script that runs the nodemon package
+            we just installed.
+          </h3>
+          <div class="box">
+            <h4>Your scripts should look like this...</h4>
+            <img
+              src="../../img/backend-with-node-js/install-backend-dependencies/scripts.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">
+            Whats happening is we are using nodemon to constantly listen for
+            changes on our backend. So we say nodemon, and we listen up changes
+            for server.js
+          </h3>
+          <h2>Start the Frontend Server</h2>
+          <h3>
+            Open the project terminal, and if you already have a localhost
+            running, press CTRL+C to stop it.
+          </h3>
+          <div class="box">
+            <h4>Once you have no localhost running, use this command...</h4>
+            <div class="code">
+              <p><em class="orng">npm</em> run start:frontend</p>
+            </div>
+          </div>
+          <h2>Start the Backend Server</h2>
+          <h3>
+            Now keep that terminal window open, but open another one for the
+            project, so that we can run more commands.
+          </h3>
+          <div class="box">
+            <h4>
+              We need to run the backend, so run this command in the new
+              terminal...
+            </h4>
+            <div class="code">
+              <p><em class="orng">npm</em> run start:backend</p>
+            </div>
+            <h4>You should get something back like this...</h4>
+            <img
+              src="../../img/backend-with-node-js/install-backend-dependencies/backend-terminal-start.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">Now you get to see what nodemon does.</h3>
+          <div class="box">
+            <h4>
+              If we go to sever.js and simply just write a console.log of just
+              some string...
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/install-backend-dependencies/server-js-console-log.PNG"
+              alt=""
+            />
+            <h4>
+              You can see how nodemon tracks the changes of the server.js
+              file...
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/install-backend-dependencies/nodemon-track-changes-example.PNG"
+              alt=""
+            />
+          </div>
+          <h3>In the next lesson we will define a port for the backend.</h3>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+        </div>
+      </section>
+    </article>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>
