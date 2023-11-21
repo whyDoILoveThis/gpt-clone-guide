@@ -1,0 +1,563 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none !important;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 4rem 1rem 3rem 1rem;
+    font-size: 26px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+em {
+    font-style: normal;
+}
+
+.h2-underline-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2-underline {
+    background-color: white;
+    height: 2px;
+    width: 100%;
+}
+
+.h2-underline-dot {
+    width: 8px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav__list a {
+    width: fit-content;
+}
+
+.content__list a {
+    width: 40%;
+    
+}
+
+a:hover .content__list-item {
+    transform: translateY(-0.5px);
+    box-shadow: -1px 10px 118px 0px rgba(255, 255, 255, 0.172);
+}
+
+a:hover .nav__list-item {
+    transition: background-color 0.3s; 
+    background-color: rgba(255, 255, 255, 0.080);
+}
+
+.site-logo {
+    font-size: 16px;
+    text-align: center;
+}
+
+.glass {
+    background-color: rgba(75, 75, 75, 0.291);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    z-index: 0;
+   
+}
+
+.showBtn {
+    background-color: #555;
+}
+
+.box {
+    border-radius: 25px;
+    border: 1px solid rgba(102, 101, 101, 0.165);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.177);
+    padding: 1.5rem;
+    background-color: #ffffff0a;
+}
+
+.box > img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.main-wrap {
+    color: rgb(255, 255, 255);
+    display: flex;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background: url(../img/background.jpg);
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.nav-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    width: 18vw;
+    height: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.content__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.8rem;
+    direction: ltr;
+}
+
+.content__list-item {
+    border: 1px solid rgba(255, 255, 255, 0.272);
+    width: 100%;
+    height: 80px;
+    padding: 0.4rem;
+    padding-top: 1.4rem;
+    border-radius: 0.7rem;
+    background-color: rgba(240, 248, 255, 0.084);
+    font-size: 14px;
+}
+
+
+
+.content-area {
+    width: 80vw;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+
+    -webkit-overflow-scrolling: touch;
+   
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    direction: rtl;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    height: 100%;
+    direction: ltr;
+    max-width: 600px;
+    overflow: visible;
+}
+
+
+
+.content-area::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.content-area::-webkit-scrollbar
+{
+	width: 3px;
+
+    border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.content-area::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #5729d66d;
+}
+
+
+.nav__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nav__list-item {
+    border: 1px solid rgba(255, 255, 255, 0.272);
+    width: fit-content;
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.nav__topic {
+    margin-bottom: 0;
+}
+
+/** CODE */
+
+.code {
+    font-family:monospace, Arial, Helvetica, sans-serif;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-style: normal;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: auto;
+    letter-spacing: -0.7px;
+}
+
+.code p::selection,
+.code em::selection {
+    background: rgba(214, 172, 238, 0.273);
+    color: inherit;
+}
+
+.code::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+    height: 7px;
+}
+.code::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.code::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 1px;
+    background-color: #F5F5F5;
+}
+
+
+.code::before {
+    content: 'bash shell';
+    background-color: rgb(55, 55, 55);
+    
+    
+    align-self: flex-start;
+    
+    color: rgb(184, 184, 184);
+    padding: 0.25rem 0.4rem 0.1rem 0.4rem;
+    border-radius: 6px 0px 6px 0;
+    font-size: 12px;
+}
+
+.code--html::before {
+    content: 'HTML';
+    color: rgb(255, 72, 0);
+    letter-spacing: 1px;
+}
+
+.code--js::before {
+   content: 'javascript';
+   color: yellow;
+}
+
+.code--ts::before {
+    content: 'TypeScript';
+    color: rgb(109, 143, 255);
+}
+
+.code--json::before {
+    content: 'json';
+    color: rgb(93, 184, 93);
+}
+
+.code--file-struct::before {
+    content: '📁';
+    font-size: 20px;
+}
+
+.code p {
+    margin: 0.5rem 0 0.5rem 2rem;
+    display: inline-block;
+    flex: 0 0 100%;
+}
+
+.comnt {
+    color: rgb(123, 123, 123);
+}
+
+.orng {
+    color: orange;
+}
+
+.grn {
+    color: rgb(60, 162, 60);
+}
+
+.blu {
+    color: rgb(74, 189, 255);
+}
+
+h3 {
+    color: #93d4f8;
+    background-color: rgba(0, 123, 255, 0.186);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 140, 255, 0.543);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h3.orng {
+    color: #fcd392;
+    background-color: rgba(255, 157, 0, 0.186);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 136, 0, 0.543);
+}
+
+h3.grn {
+    color: #6eda80;
+    background-color: rgba(0, 255, 17, 0.186);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 68, 0.543);
+}
+
+.red {
+    color: rgb(255, 0, 51);
+}
+
+h3.red {
+    background-color: rgba(255, 0, 0, 0.221);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(246, 46, 83, 0.256);
+}
+
+.copyright {
+    margin: 2rem;
+    padding-bottom: 1rem;
+}
+
+.copyright::before {
+    content: '© 2023 - Ian Thai Smith ';
+    font-family: 'Times New Roman', Times, serif ;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+/** COLLAPSIBLE */
+
+.centerer {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.sections-collapsible {
+    max-width: 400px;
+}
+
+.sections-heading {
+    border: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-list {
+    padding: 0;
+}
+ 
+    
+ 
+
+    .section-item {
+        padding: 1.2rem;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+
+
+    /** COLLAPSIBLES */
+
+/*^ '.collapsible' can be found in 'main.js' */
+
+.icon {
+   width: 20px;  
+}
+
+.icon-wrap {
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-icon-wrap {
+    position: absolute;
+    left: 20px;
+}
+
+.back-icon-wrap {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    transition: opacity 0.5s ease;
+}
+
+.collapsible {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    border-radius: 40px;
+    line-height: 1.47rem;
+    background-color: #73737315;
+    transition: border-radius 1s ease;
+    position: absolute;
+    left: 35px;
+    top: 150px;
+    
+}
+
+.collapsible--expanded {
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    max-height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.302);
+    background-color: rgba(75, 75, 75, 0.101);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    transition:  background-color 2s ease;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    direction: rtl;
+    padding: 1rem;
+}
+
+
+.close-btn {
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+   
+    transition: max-height 0.3s, opacity 0.2s;
+    
+    
+}
+
+
+.collapsible--expanded .collapsible__content{
+    opacity: 1;
+    max-height: 250px;
+    width: 300px;
+    transition: max-height 1s, opacity 0.6s;
+    overflow-y: scroll;
+    
+}
+
+.collapsible__content::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.collapsible__content::-webkit-scrollbar
+{
+	width: 3px;
+
+    border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.collapsible__content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #5729d66d;
+}
+
+.collapsible__button {
+    transform: rotatex(-180deg);
+    transition: transform 0.5s, background-color 0.3s;
+    align-self: center;
+    width: 30px;
+    background-color:var(--color--btn);
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.302);
+    cursor: pointer;
+
+    position: absolute;
+    left: 0;
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none !important;
+}
+
+.collapsible__button:hover {
+    background-color: rgba(255, 255, 255, 0.080);
+}
+
+.collapsible--expanded .collapsible__button {
+    transform: rotatex(0);
+    top: 100%;
+    transition: transform 0.32s;
+}
