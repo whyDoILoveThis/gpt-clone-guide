@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Create Basic Structure and Style with CSS</title>
+  </head>
+  <body>
+    <article class="main-wrap">
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <aside class="nav-wrap">
+        <div class="nav box glass">
+          <header class="site-logo">GPT Clone Guide</header>
+          <ul class="nav__list">
+            <!--~-->
+            <!--* HOME BTN -->
+            <!--^-->
+            <a href="/index.html">
+              <li class="nav__list-item icon-wrap home-icon-wrap">
+                <img
+                  src="/img/icons/icon--home.png"
+                  alt=""
+                  class="icon home-icon"
+                />
+              </li>
+            </a>
+            <!--~-->
+            <!--* BACK BTN -->
+            <!--^-->
+            <a href="getting-started-ui-setup.html">
+              <li class="nav__list-item icon-wrap back-icon-wrap">
+                <img
+                  src="/img/icons/icon--back.PNG"
+                  alt=""
+                  class="icon back-icon"
+                />
+              </li>
+            </a>
+          </ul>
+        </div>
+      </aside>
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <section class="content-area box glass">
+        <div class="content">
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+          <h1>Create Basic Structure and Style with CSS</h1>
+          <!--topic-->
+          <h2>Sidebar and Main</h2>
+          <div class="box">
+            <h4>
+              In the App component, add 2 sections. One for the sidebar, and
+              another for the main content area...
+            </h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/create-sidebar-and-main.PNG"
+              alt=""
+            />
+          </div>
+          <!--topic-->
+          <h2>Sidebar Children</h2>
+          <h3>
+            We will give the sidebar section 3 children. A button to start a new
+            chat, a ul to hold the our past chats, and a nav containing a p for
+            our signature.
+          </h3>
+          <div class="box">
+            <h4>You should have this now...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/section-children.PNG"
+              alt=""
+            />
+          </div>
+          <!--topic-->
+          <h2>Adding Some Styles</h2>
+          <h3>
+            We are going to use justify-content space-between to space the
+            children out evenly.
+          </h3>
+          <h3>So let's write a few styles.</h3>
+          <div class="box">
+            <h4>
+              Go to google fonts and get the Open Sans font. Also set the text
+              of all elements to white...
+            </h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/open-sans.PNG"
+              alt=""
+            />
+
+            <h4>
+              Next, grab the whole body, and set the margin and padding to 0...
+            </h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/body-style.PNG"
+              alt=""
+            />
+            <h4>Then grab the div.app and set its background color...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/app-background.PNG"
+              alt=""
+            />
+            <h4>Finally, style the sidebar and main...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/style-sidebar-and-main.PNG"
+              alt=""
+            />
+          </div>
+          <!--topic-->
+          <h2>Run the Local Server</h2>
+          <h3>
+            Now we can run the localhost server to see what we have so far.
+          </h3>
+          <div class="box">
+            <h4>So pull up the terminal and run this command...</h4>
+            <div class="code">
+              <p><em class="orng">npm</em> run start</p>
+            </div>
+            <h4>
+              What we are doing is running this start command from
+              package.json...
+            </h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/start-command.PNG"
+              alt=""
+            />
+            <h4>If everything goes right you should have this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/result.PNG"
+              alt=""
+            />
+          </div>
+          <!--topic-->
+          <h2>Further Style the Sidebar</h2>
+          <h3>
+            We said that we were going to use space between to spread the items
+            out so let's do that...
+          </h3>
+          <div class="box">
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/space-between.PNG"
+              alt=""
+            />
+
+            <h4>Let's also add some simple styles to the button...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/button-styles.PNG"
+              alt=""
+            />
+          </div>
+          <h3>
+            Next we want our signature to be pushed away from the edge a little
+            bit, and give it a top border.
+          </h3>
+          <div class="box">
+            <h4>So after the button, apply these styles...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/nav-styles.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">
+            I realize this isn't the best styling practice, I notice the
+            duplication, but we just needed some quick styles to get us going,
+            this isn't a CSS tutorial.
+          </h3>
+          <h3 class="red">
+            <a target="_blank" href=""><em class="blu">Donald Knuth</em></a>
+            once said, "Premature optimization is the root of all evil."
+          </h3>
+          <!--topic-->
+          <h2>Style the Chat History</h2>
+          <h3>Now we want to style how the chat history will be displayed.</h3>
+          <div class="box">
+            <h4>So add some mock list items...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/add-some-list-items.PNG"
+              alt=""
+            />
+            <h4>Then style the history and items...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/history-and-items.PNG"
+              alt=""
+            />
+            <h4></h4>
+          </div>
+          <!--topic-->
+          <h2>Build the Main Area</h2>
+          <h3>
+            For the main area we want a title, a list to hold our chat data, and
+            a bottom section.
+          </h3>
+          <div class="box">
+            <h4>
+              Also in the bottom section we have an input container, and an info
+              paragraph...
+            </h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/main-section-struct.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">
+            The styling should look all wrong. Let's fix that.
+          </h3>
+          <!--topic-->
+          <h2>Style the Main Area</h2>
+          <h3>First we want our 2 sections side by side.</h3>
+          <div class="box">
+            <h4>So, give the app a display of flex...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/app-display.PNG"
+              alt=""
+            />
+            <h4>So far we should have this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/should-have-this-so-far.PNG"
+              alt=""
+            />
+          </div>
+          <h3>
+            Now we want everything centered, and space between the heading and
+            bottom section.
+          </h3>
+          <div class="box">
+            <h4>So we add these styles to the main...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/main-styles.PNG"
+              alt=""
+            />
+            <h4>And we get this now...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/main-styles-give-this.PNG"
+              alt=""
+            />
+          </div>
+          <!--topic-->
+          <h2>Style the Bottom Section of the Main Area</h2>
+          <h3>Ok let's break this down really simple.</h3>
+          <h3 class="grn">.bottom-secton</h3>
+          <div class="box">
+            <h4>Style .bottom-section like this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/bottom-section.PNG"
+              alt=""
+            />
+            <h4>And get this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/bottom-section-result.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">.input-container</h3>
+          <div class="box">
+            <h4>Style .input-container like this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/input-container.PNG"
+              alt=""
+            />
+            <h4>And get this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/input-container-result.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">input</h3>
+          <div class="box">
+            <h4>Style input like this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/input.PNG"
+              alt=""
+            />
+            <h4>And get this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/input-result.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">Finally, #submit and .info</h3>
+          <div class="box">
+            <h4>Style #submit and .info like this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/submit-and-info.PNG"
+              alt=""
+            />
+            <h4>And get this...</h4>
+            <img
+              src="../../img/getting-started-ui-setup/creating-the-basic-structure-with-react-and-css/submit-and-info-result.PNG"
+              alt=""
+            />
+          </div>
+          <h3>
+            We probably should have reduced the font size of the info, but oh
+            well.
+          </h3>
+          <h3 class="orng">
+            Again, I realize these are not good CSS practices. If they really
+            bother you, it will not affect the project to write the CSS however
+            you like.
+          </h3>
+          <h3>
+            In the next lesson we are going to start building the backend to
+            hook a little bit to the API.
+          </h3>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+        </div>
+      </section>
+    </article>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>

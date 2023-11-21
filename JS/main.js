@@ -40,7 +40,7 @@ content.appendChild(copyright);
 
 // Check the current page's filename
 const currentFilename = window.location.pathname.split('/').pop();
-if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html') {
+if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html') {
     createCollapsibleStructure();
 }
 
@@ -68,14 +68,20 @@ function createCollapsibleStructure() {
 
   icon.addEventListener('click', () => {
     const backBtn = document.querySelector('.back-icon-wrap');
+    const toTopBtn = document.querySelector('.to-top-btn');
+    const toBtmBtn = document.querySelector('.to-bottom-btn');
     if(!collapsible.classList.contains('collapsible--expanded')){ 
       icon.src = '../../img/icons/icon--close.png'
       icon.classList.add('close-btn');
    backBtn.style.opacity = '0';
+   toTopBtn.style.opacity = '0';
+   toBtmBtn.style.opacity = '0';
   
 } else {
         icon.src = '../../img/icons/icon--menu.png';
        backBtn.style.opacity = '1';
+       toTopBtn.style.opacity = '1';
+       toBtmBtn.style.opacity = '1';
         icon.classList.remove('close-btn');
     }
   })
@@ -155,3 +161,36 @@ cards.forEach(card => {
   }
 });
 
+
+if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html') {
+// JUMP-TO-TOP BUTTON
+const mainWrap = document.querySelector('.main-wrap');
+const toTopIcon = document.createElement("img");
+const toTopLink = document.createElement("a");
+const theTopOfPage = document.createElement('span');
+const h1 = document.querySelector('h1');
+theTopOfPage.id = "top"
+h1.appendChild(theTopOfPage);
+toTopLink.href = "#top";
+toTopIcon.src = "../../img/icons/icon--back.png";
+toTopIcon.classList.add("to-top-btn");
+toTopIcon.classList.add('icon');
+toTopLink.classList.add('icon-wrap');
+mainWrap.appendChild(toTopLink);
+toTopLink.appendChild(toTopIcon);
+
+// JUMP-TO-BOTTOM BUTTON
+const toBottomIcon = document.createElement("img");
+const toBottomLink = document.createElement("a");
+const theBottomOfPage = document.createElement('span');
+theBottomOfPage.id = "bottom"
+content.appendChild(theBottomOfPage);
+toBottomLink.href = "#bottom";
+toBottomIcon.src = "../../img/icons/icon--back.png";
+toBottomIcon.classList.add("to-bottom-btn");
+toBottomIcon.classList.add('icon');
+toBottomLink.classList.add('icon-wrap');
+mainWrap.appendChild(toBottomLink);
+toBottomLink.appendChild(toBottomIcon);
+
+}

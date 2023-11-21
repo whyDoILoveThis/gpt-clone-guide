@@ -65,6 +65,15 @@ a {
     text-decoration: none;
 }
 
+h3 a {
+    text-decoration: underline;
+}
+
+h3 a:hover {
+    filter: brightness(115%);
+   
+}
+
 .nav__list a {
     width: fit-content;
 }
@@ -95,10 +104,6 @@ a:hover .nav__list-item {
     -webkit-backdrop-filter: blur(50px);
     z-index: 0;
    
-}
-
-.showBtn {
-    background-color: #555;
 }
 
 .box {
@@ -445,6 +450,34 @@ h3.red {
     left: 20px;
     bottom: 18px;
     transition: opacity 0.5s ease;
+}
+
+.to-top-btn {
+    border: 1px solid rgba(255, 255, 255, 0.272);
+    padding: 0.4rem;
+    border-radius: 30px;
+    width: 28px;
+
+    position: absolute;
+    left: 20px;
+    bottom: 80px;
+    transform: rotateZ(90deg);
+    transition: opacity 0.5s ease;
+
+}
+
+.to-bottom-btn {
+    border: 1px solid rgba(255, 255, 255, 0.272);
+    padding: 0.4rem;
+    border-radius: 30px;
+    width: 28px;
+
+    position: absolute;
+    bottom: 80px;
+    left: 52px;
+    transform: rotateZ(-90deg);
+    transition: opacity 0.5s ease;
+
 }
 
 .collapsible {
