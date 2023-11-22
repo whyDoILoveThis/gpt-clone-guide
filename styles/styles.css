@@ -124,10 +124,29 @@ a:hover .nav__list-item {
     display: flex;
     gap: 0.5rem;
     padding: 1.5rem;
-    background: url(../img/background.jpg);
-    background-size: cover;
+    background: rgb(131,58,180);
+ background-image: linear-gradient(
+            55deg,
+            hsl(213deg 100% 20%) 0%,
+            hsl(235deg 43% 31%) 7%,
+            hsl(258deg 39% 35%) 15%,
+            hsl(278deg 39% 36%) 24%,
+            hsl(298deg 40% 37%) 34%,
+            hsl(314deg 46% 42%) 44%,
+            hsl(325deg 50% 47%) 53%,
+            hsl(333deg 58% 52%) 62%,
+            hsl(341deg 71% 58%) 70%,
+            hsl(349deg 86% 63%) 77%,
+            hsl(358deg 100% 68%) 83%,
+            hsl(8deg 100% 67%) 88%,
+            hsl(18deg 100% 64%) 92%,
+            hsl(27deg 100% 62%) 96%,
+            hsl(36deg 100% 58%) 98%,
+            hsl(43deg 100% 55%) 100%,
+            hsl(50deg 100% 50%) 100%,
+            hsl(55deg 100% 50%) 100%
+    );    background-size: cover;
     height: 100vh;
-    padding-right: 0;
 }
 
 .nav-wrap {
@@ -364,14 +383,14 @@ h3.grn {
 }
 
 .red {
-    color: rgb(255, 0, 51);
+    color: rgb(95, 0, 0);
 }
 
 h3.red {
-    background-color: rgba(255, 0, 0, 0.221);
+    background-color: rgba(255, 0, 0, 0.483);
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid rgba(246, 46, 83, 0.256);
+    border: 1px solid rgb(108, 0, 0);
 }
 
 .copyright {

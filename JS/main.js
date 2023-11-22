@@ -161,18 +161,23 @@ cards.forEach(card => {
   }
 });
 
-
-if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html') {
-// JUMP-TO-TOP BUTTON
 const mainWrap = document.querySelector('.main-wrap');
 const toTopIcon = document.createElement("img");
 const toTopLink = document.createElement("a");
 const theTopOfPage = document.createElement('span');
 const h1 = document.querySelector('h1');
+toTopIcon.src = "../../img/icons/icon--back.PNG";
+
+const toBottomIcon = document.createElement("img");
+const toBottomLink = document.createElement("a");
+const theBottomOfPage = document.createElement('span');
+toBottomIcon.src = "../../img/icons/icon--back.PNG";
+
+if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html') {
+// JUMP-TO-TOP BUTTON
 theTopOfPage.id = "top"
 h1.appendChild(theTopOfPage);
 toTopLink.href = "#top";
-toTopIcon.src = "../../img/icons/icon--back.png";
 toTopIcon.classList.add("to-top-btn");
 toTopIcon.classList.add('icon');
 toTopLink.classList.add('icon-wrap');
@@ -180,13 +185,9 @@ mainWrap.appendChild(toTopLink);
 toTopLink.appendChild(toTopIcon);
 
 // JUMP-TO-BOTTOM BUTTON
-const toBottomIcon = document.createElement("img");
-const toBottomLink = document.createElement("a");
-const theBottomOfPage = document.createElement('span');
 theBottomOfPage.id = "bottom"
 content.appendChild(theBottomOfPage);
 toBottomLink.href = "#bottom";
-toBottomIcon.src = "../../img/icons/icon--back.png";
 toBottomIcon.classList.add("to-bottom-btn");
 toBottomIcon.classList.add('icon');
 toBottomLink.classList.add('icon-wrap');
