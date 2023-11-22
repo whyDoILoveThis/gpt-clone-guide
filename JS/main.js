@@ -76,9 +76,17 @@ function createCollapsibleStructure() {
    backBtn.style.opacity = '0';
    toTopBtn.style.opacity = '0';
    toBtmBtn.style.opacity = '0';
+   setTimeout(() => {
+     backBtn.style.left = '-99999px';
+     toTopBtn.style.left = '-99999px';
+     toBtmBtn.style.left = '-99999px';
+   }, 300);
   
 } else {
         icon.src = '../../img/icons/icon--menu.png';
+        backBtn.style.left = '28px';
+     toTopBtn.style.left = '28px';
+     toBtmBtn.style.left = '60px';
        backBtn.style.opacity = '1';
        toTopBtn.style.opacity = '1';
        toBtmBtn.style.opacity = '1';

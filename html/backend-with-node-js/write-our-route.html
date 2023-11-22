@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Write Our Route</title>
+  </head>
+  <body>
+    <article class="main-wrap">
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <aside class="nav-wrap">
+        <div class="nav box glass">
+          <header class="site-logo">GPT Clone Guide</header>
+          <ul class="nav__list">
+            <!--~-->
+            <!--* HOME BTN -->
+            <!--^-->
+            <a href="/index.html">
+              <li class="nav__list-item icon-wrap home-icon-wrap">
+                <img
+                  src="/img/icons/icon--home.png"
+                  alt=""
+                  class="icon home-icon"
+                />
+              </li>
+            </a>
+            <!--~-->
+            <!--* BACK BTN -->
+            <!--^-->
+            <a href="backend-with-node-js.html">
+              <li class="nav__list-item icon-wrap back-icon-wrap">
+                <img
+                  src="/img/icons/icon--back.PNG"
+                  alt=""
+                  class="icon back-icon"
+                />
+              </li>
+            </a>
+          </ul>
+        </div>
+      </aside>
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <section class="content-area box glass">
+        <div class="content">
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+          <h1>Write Our Route</h1>
+          <!--topic-->
+          <h2>Defining The Route</h2>
+          <h3>The time has come to write a route.</h3>
+          <h3 class="grn">
+            So, if we post to the route, let's say 'localhost:8000/completions',
+            if we visit that url it will exist.
+          </h3>
+          <div class="box">
+            <h4>So say this...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/completion.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="box red">
+            Throughout this entire course, the page of that url will look like
+            this...
+            <br />
+            <img
+              src="../../img/backend-with-node-js/write-our-route/look-like-this-forever.PNG"
+              alt=""
+            />
+            <br />
+            But don't worry that's just fine.
+          </h3>
+          <h2>The Route Syntax</h2>
+          <div class="box">
+            <h4>The syntax for this will be a request and response...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/req-and-res.PNG"
+              alt=""
+            />
+            <h4 class="orng">
+              This will actually be an async function, because we are going to
+              use the await keyword inside it.
+            </h4>
+            <h4>But don't worry about that for now.</h4>
+          </div>
+          <h3>For now we are just going to add a try catch.</h3>
+          <h2>Try Catch</h2>
+          <div class="box">
+            <h4>So add a try, then catch and log any errors...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/try-catch.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">So what are we gonna try?</h3>
+          <h3>Well, we are going to use the fetch keyword.</h3>
+          <h3 class="red">
+            ⚠ You must be on the latest version of node for the fetch keyword to
+            work on the backend!
+          </h3>
+          <h3 class="orng">
+            So all we do is fetch to the 'OpenAI Completions API'.
+          </h3>
+          <h2>OpenAI Chat Completions</h2>
+          <h3 class="grn">
+            Their website changes alot, but you should be able to go to
+            <em class="blu"
+              ><a
+                href="https://platform.openai.com/docs/guides/text-generation/chat-completions-api"
+                >https://platform.openai.com/docs/ guides/text-generation
+                /chat-completions-api</a
+              ></em
+            >
+            and find the endpoints.
+          </h3>
+          <div class="box">
+            <h4>You should find something like this...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/open-ai-endpoint-site.PNG"
+              alt=""
+            />
+            <h4 class="orng">
+              What this is, is a POST request to the openai chat completions
+              url.
+            </h4>
+          </div>
+          <h2>Try</h2>
+          <h3 class="box grn">
+            So what are we gonna try? We try to fetch this url.
+            <br />
+            <br />
+            Like this...
+            <br />
+            <img
+              src="../../img/backend-with-node-js/write-our-route/try-to-fetch.PNG"
+              alt=""
+            />
+            <br />
+          </h3>
+          <h2>Passing Options</h2>
+          <h3>
+            Next we need to pass through some options, like what kind of request
+            its going to be so what methods, some headers with our API key, what
+            model of gpt we want to use, and what message we want to send over.
+          </h3>
+          <div class="box">
+            <h4>
+              So we add an options parameter to the fetch, and then define the
+              options object...
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/const-options.PNG"
+              alt=""
+            />
+            <h4>
+              Our first object property is a method that takes a POST, and the
+              second will be an object of headers...
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/options-def-first-2.PNG"
+              alt=""
+            />
+          </div>
+          <h2>The Object of Headers</h2>
+          <h3 class="orng">
+            The first header we need is "Authorization". Make absolutely sure
+            you spell it correctly.
+          </h3>
+          <h3 class="box orng">
+            Making sure to use backticks, we say `Bearer` with our api key
+            const...
+            <br />
+            <img
+              src="../../img/backend-with-node-js/write-our-route/auth-bearer.PNG"
+              alt=""
+            />
+          </h3>
+          <div class="box">
+            <h4>
+              Next we are going to pass the content type as application json,
+              because we are going to be working with json...
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/content-type.PNG"
+              alt=""
+            />
+          </div>
+          <h3>Now we can define the request body.</h3>
+          <h2>Defining the Request Body</h2>
+          <h3>
+            We are going to have to pass the body through JSON.stringify(), and
+            it's going to be an object that we send through, and that object
+            will be "jsonified" thanks to JSON.stringify()
+          </h3>
+          <div class="box">
+            <h4>The body should come after the headers like this...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/body.PNG"
+              alt=""
+            />
+          </div>
+          <h3>
+            In the body, we define the model of gpt we want to use, the messages
+            we want to send, and the max amount of tokens we will allow for a
+            single api request.
+          </h3>
+          <div class="box">
+            <h4>Defining that looks like this...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/body-definfdd.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">
+            If you have no idea how the tokens, or anything else works, a quick
+            google will reaveal to you the answers.
+          </h3>
+          <h3 class="box red">
+            📢 IMPORTANT NOTE!
+            <br />
+            You absolutely MUST have this to pass json from the backend to the
+            frontend!
+            <br />
+            <img
+              src="../../img/backend-with-node-js/write-our-route/must-have.PNG"
+              alt=""
+            />
+          </h3>
+          <h2>Finish the Try Method</h2>
+          <h3>
+            So the fetch to the api is an async method so we need to await the
+            fetch, and save it to a const.
+          </h3>
+          <div class="box">
+            <h4>Here is our try...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/save-try.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">
+            We have an err on await, because since we are using the await
+            keyword, the parent function needs to be an async method.
+          </h3>
+          <div class="box">
+            <h4>So add 'async' in front of the req res function...</h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/add-async.PNG"
+              alt=""
+            />
+          </div>
+
+          <h3>
+            So once the response has been awaited, and we get it back, we're
+            gonna get its json.
+          </h3>
+          <h3 class="orng">
+            But json is another async function, so we have to await it too.
+          </h3>
+          <div class="box">
+            <h4>
+              So we await it and when we get it back we save it as data...
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/save-data.PNG"
+              alt=""
+            />
+
+            <h4>
+              Then we just send the data over to localhost:8000/completions, by
+              passing it through res.send()
+            </h4>
+            <img
+              src="../../img/backend-with-node-js/write-our-route/res-send.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">
+            Great! Thats it for this section of the course. Now we can hook the
+            backendend to the frontend!
+          </h3>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+        </div>
+      </section>
+    </article>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>
