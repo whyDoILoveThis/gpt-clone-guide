@@ -40,7 +40,7 @@ content.appendChild(copyright);
 
 // Check the current page's filename
 const currentFilename = window.location.pathname.split('/').pop();
-if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html') {
+if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html' && currentFilename !== 'hooking-backend-to-frontend.html') {
     createCollapsibleStructure();
 }
 
@@ -181,7 +181,10 @@ const toBottomLink = document.createElement("a");
 const theBottomOfPage = document.createElement('span');
 toBottomIcon.src = "../../img/icons/icon--back.PNG";
 
-if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html') {
+if (currentFilename !== 'index.html'
+     && currentFilename !== 'getting-started-ui-setup.html'
+     && currentFilename !== 'backend-with-node-js.html'
+     && currentFilename !== 'hooking-backend-to-frontend.html') {
 // JUMP-TO-TOP BUTTON
 theTopOfPage.id = "top"
 h1.appendChild(theTopOfPage);

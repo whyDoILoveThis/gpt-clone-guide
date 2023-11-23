@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Sending a Message, and Getting a Response</title>
+  </head>
+  <body>
+    <article class="main-wrap">
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <aside class="nav-wrap">
+        <div class="nav box glass">
+          <header class="site-logo">GPT Clone Guide</header>
+          <ul class="nav__list">
+            <!--~-->
+            <!--* HOME BTN -->
+            <!--^-->
+            <a href="/index.html">
+              <li class="nav__list-item icon-wrap home-icon-wrap">
+                <img
+                  src="/img/icons/icon--home.png"
+                  alt=""
+                  class="icon home-icon"
+                />
+              </li>
+            </a>
+            <!--~-->
+            <!--* BACK BTN -->
+            <!--^-->
+            <a href="hooking-backend-to-frontend.html">
+              <li class="nav__list-item icon-wrap back-icon-wrap">
+                <img
+                  src="/img/icons/icon--back.PNG"
+                  alt=""
+                  class="icon back-icon"
+                />
+              </li>
+            </a>
+          </ul>
+        </div>
+      </aside>
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <section class="content-area box glass">
+        <div class="content">
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+          <h1>Sending a Message, and Getting a Response</h1>
+          <!--topic-->
+          <h2>Set the onClick</h2>
+          <h3 class="grn">Now we need to be in App.js</h3>
+          <h3>
+            The first thing we need to do is set up the onClick to run an asnyc
+            method to get a message back from gpt.
+          </h3>
+          <div class="box">
+            <h4>So set the onClick of our submit div to getMessages...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-a-message-and-getting-a-response/onClick.PNG"
+              alt=""
+            />
+            <h4>We will be defining getMessages next.</h4>
+          </div>
+          <h2>Defing getMessages</h2>
+          <div class="box">
+            <h4>Now, at the top of the App component, start with this...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-a-message-and-getting-a-response/getMsgs.PNG"
+              alt=""
+            />
+            <h4>
+              Then await fetch again, but this time get it from our backend
+              localhost...
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-a-message-and-getting-a-response/await-fetch.PNG"
+              alt=""
+            />
+            <h4 class="orng">
+              We also pass options, because of course we need to send data.
+            </h4>
+          </div>
+          <h3 class="grn">So let's define those options now.</h3>
+          <h2>Defining the Options</h2>
+          <h3>Just like before the method is POST.</h3>
+          <h3>
+            For the body this time we are just passing a message through
+            JSON.strinify().
+          </h3>
+          <h3>
+            And we do need to add headers because we're working with json.
+          </h3>
+          <div class="box">
+            <h4>So, the method, the body, and the headers...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-a-message-and-getting-a-response/options.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="red">
+            At the moment we just hard coded 'hello how are you?' but this
+            doesn't even matter, because the message we defined in server.js is
+            the one that will get sent.
+          </h3>
+          <h2>Store the Data and console.log It</h2>
+          <h3>
+            Next, we store the response, then when we get it back we run the
+            response through json and save it as data, then we log that data.
+          </h3>
+          <div class="box">
+            <h4>So try to fetch the response, then log the data...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-a-message-and-getting-a-response/try-this-mf.PNG"
+              alt=""
+            />
+            <h4 class="orng">
+              ⚠ Don't forget that json() is an async method, so we have to await
+              it!
+            </h4>
+          </div>
+          <h2>Give It a Try</h2>
+          <h3>
+            Now if we open up our application and press the submit button we
+            should get a big ole object back in the console.
+          </h3>
+          <h3>
+            If you look through it and find the message property, that is the
+            reply to our message.
+          </h3>
+          <h3 class="grn">
+            Now we don't want the message to be hard coded and stuck inside our
+            code.
+          </h3>
+          <h3 class="grn">
+            We want to grab the value of the input field and send that as the
+            message, so we will do that next.
+          </h3>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+        </div>
+      </section>
+    </article>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>

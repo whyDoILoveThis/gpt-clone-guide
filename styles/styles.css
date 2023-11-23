@@ -126,24 +126,12 @@ a:hover .nav__list-item {
     background: rgb(131,58,180);
  background-image: linear-gradient(
             55deg,
-            hsl(213deg 100% 20%) 0%,
-            hsl(235deg 43% 31%) 7%,
-            hsl(258deg 39% 35%) 15%,
-            hsl(278deg 39% 36%) 24%,
-            hsl(298deg 40% 37%) 34%,
-            hsl(314deg 46% 42%) 44%,
-            hsl(325deg 50% 47%) 53%,
-            hsl(333deg 58% 52%) 62%,
-            hsl(341deg 71% 58%) 70%,
-            hsl(349deg 86% 63%) 77%,
-            hsl(358deg 100% 68%) 83%,
-            hsl(8deg 100% 67%) 88%,
-            hsl(18deg 100% 64%) 92%,
-            hsl(27deg 100% 62%) 96%,
-            hsl(36deg 100% 58%) 98%,
-            hsl(43deg 100% 55%) 100%,
-            hsl(50deg 100% 50%) 100%,
-            hsl(55deg 100% 50%) 100%
+            hsl(276, 100%, 20%) 0%,
+            hsl(264, 43%, 31%) 7%,
+            hsl(278, 39%, 35%) 15%,
+            hsl(252, 35%, 33%) 24%,
+            hsl(236, 44%, 45%) 34%
+       
     );    background-size: cover;
     height: 100vh;
 }
