@@ -30,7 +30,7 @@
               <!--* BACK BTN -->
               <!--^-->
               <li class="border-round">
-                <a class="icon-wrap" href="getting-started-ui-setup.html">
+                <a class="icon-wrap" href="hooking-backend-to-frontend.html">
                   <img
                     src="/img/icons/icon--back.PNG"
                     alt=""
@@ -76,81 +76,64 @@
       <!--!-->
       <section class="content-area box glass">
         <div class="content">
-          <h1>Project Setup</h1>
-          <h2>create-react-app</h2>
-          <h3>
-            The first thing we need to do is create a react app. I like to use
-            the good ole create-react-app for something simple like what we're
-            doing here.
-          </h3>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+          <h1>Display the Response in Our App</h1>
+          <!--topic-->
+          <h2>Save the Previous Chats</h2>
           <div class="box">
             <h4>
-              So, create a folder somewhere for this project, open the trusty
-              ole terminal, and run this command...
+              First we want to save all the previous chats in a usestate
+              array...
             </h4>
-            <div class="code">
-              <p><em class="orng">npx</em> create-react-app ./</p>
-            </div>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/previous-chats.PNG"
+              alt=""
+            />
           </div>
-          <h3 class="grn">Happy Hacking!</h3>
-          <h2>Remove unnecessary files</h2>
           <h3>
-            React adds alot of boilerplate code, some of which we do not need.
-          </h3>
-          <h3>We're not going to run any tests.</h3>
-          <div class="box">
-            <h4>So delete these 3 files...</h4>
-            <img
-              src="/img/getting-started-ui-setup/project-setup/delete-these-files.PNG"
-              alt=""
-            />
-          </div>
-          <h3 class="orng">
-            We don't need the logo either, so delete it as well.
-          </h3>
-          <h3 class="red">
-            Also delete the App.css, because we are going to write all the
-            styles for this small project in the index.css
-          </h3>
-          <h2>App.js</h2>
-          <div class="box">
-            <h4>So we should only have these 3 files...</h4>
-            <img
-              src="../../img/getting-started-ui-setup/project-setup/only-these-3-files.PNG"
-              alt=""
-            />
-            <h4>And we should clean up the App component like this...</h4>
-            <img
-              src="../../img/getting-started-ui-setup/project-setup/only-this-in-app-js.PNG"
-              alt=""
-            />
-          </div>
-          <h2>index.css and index.js</h2>
-          <h3>index.css should be completely empty.</h3>
-          <h3>
-            In index.js, remove the comments, and the web vitals because we
-            aren't running tests.
-          </h3>
-          <h3 class="orng">
-            We are also writing code without semi-colons in this guide, just for
-            personal preference.
+            So we are going to get the whole message which contains the role and
+            content, and we are also going to give the message a title so that
+            we can lump the messages together into a conversation.
           </h3>
           <div class="box">
+            <h4>Let's start with a use effect...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/useeffect.PNG"
+              alt=""
+            />
             <h4>
-              So, index.css should be empty and index.js should look like
-              this...
+              And we want this to run after each time the message changes (which
+              is the response from chatGPT)...
             </h4>
             <img
-              src="../../img/getting-started-ui-setup/project-setup/index-js.PNG"
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/message-useeffect.PNG"
               alt=""
             />
           </div>
-          <h3 class="grn">
-            Like I keep saying, this is a really small project, so we arent
-            going to have any React components or anything like that. This is
-            all about learning to use the openAI API! Yay!
-          </h3>
-          <h3>In the next lesson we are going to begin building our app.</h3>
+          <br />
+          <div class="box">
+            <h4>We also want a place to save the current title...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/currenttitle.PNG"
+              alt=""
+            />
+            <h4>And add it to the end of the useeffect too...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/currenttitle-useeffect.PNG"
+              alt=""
+            />
+            <h4>Then do a console.log of these...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/console-log-in-useeffect.PNG"
+              alt=""
+            />
+          </div>
+          <h2>Create Logic for Setting Chat Title</h2>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
         </div>
       </section>
     </article>

@@ -9,9 +9,37 @@
   </head>
   <body>
     <article class="main-wrap">
-      <aside class="nav box glass">
-        <header class="site-logo">GPT Clone Guide</header>
-      </aside>
+      <div class="nav-wrap">
+        <aside class="nav box glass">
+          <header class="site-logo">
+            GPT Clone Guide<button class="nav__menu-toggler">
+              <img
+                class="nav__menu-toggler-img"
+                src="/img/icons/icon--down.png"
+                alt=""
+              />
+            </button>
+          </header>
+          <ul class="nav__list">
+            <li
+              style="
+                margin: 0.5rem;
+                margin-top: 2rem;
+                font-size: 16px;
+                border: 0;
+                border-bottom: 1px solid white;
+                text-align: center;
+              "
+              class="nav__other-guides"
+            >
+              Other&nbsp;Guides
+            </li>
+            <a href="">
+              <li class="nav__list-item">MERN Social App</li>
+            </a>
+          </ul>
+        </aside>
+      </div>
       <section class="content-area box glass">
         <div class="content">
           <h1>Home</h1>
@@ -19,26 +47,58 @@
             <a
               href="html/getting-started-ui-setup/getting-started-ui-setup.html"
             >
-              <li class="content__list-item">Getting Started/UI Setup</li>
+              <li class="content__list-item">
+                <img
+                  class="icon"
+                  src="/img/icons/icon--getting-started.png"
+                  alt=""
+                />
+                Getting Started/UI Setup
+              </li>
             </a>
             <a href="html/backend-with-node-js/backend-with-node-js.html">
-              <li class="content__list-item">Backend with node.js</li>
+              <li class="content__list-item">
+                <img
+                  class="icon"
+                  src="/img/icons/icon--backend-with-node-js.png"
+                  alt=""
+                />Backend with node.js
+              </li>
             </a>
             <a
               href="html/hooking-backend-to-frontend/hooking-backend-to-frontend.html"
             >
-              <li class="content__list-item">Hooking Backend to Frontend</li>
+              <li class="content__list-item">
+                <img
+                  class="icon"
+                  src="/img/icons/icon--backend-connection.png"
+                  alt=""
+                />Hooking Backend to Frontend
+              </li>
             </a>
             <a href="">
               <li class="content__list-item">
+                <img
+                  class="icon"
+                  src="/img/icons/icon--getting-started.png"
+                  alt=""
+                />
                 PreviousChats for Saving AI Response
               </li>
             </a>
             <a href="">
-              <li class="content__list-item">New Chat</li>
+              <li class="content__list-item">
+                <img class="icon" src="/img/icons/icon--plus.png" alt="" />New
+                Chat
+              </li>
             </a>
             <a href="">
               <li class="content__list-item">
+                <img
+                  class="icon"
+                  src="/img/icons/icon--getting-started.png"
+                  alt=""
+                />
                 Show in Chat History and Show Chats In Chatroom
               </li>
             </a>

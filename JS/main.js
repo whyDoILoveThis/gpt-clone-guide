@@ -1,6 +1,27 @@
 
 
+/// Naviation menu toggler
+const nav = document.querySelector('.nav');
+const navOtherGuides = document.querySelector('.nav__other-guides');
+const navList = document.querySelector('.nav__list');
+const navMenuToggler = document.querySelector('.nav__menu-toggler');
+const navMenuTogglerIMG = document.querySelector('.nav__menu-toggler-img');
+navMenuToggler.addEventListener('click', function() {
+  navOtherGuides.classList.toggle('nav__other-guides');
+  navList.classList.toggle('nav__list');
+  nav.classList.toggle('nav-expanded');
+  if(nav.classList.contains('nav-expanded')){ 
+    navMenuTogglerIMG.src = '/img/icons/icon--close.png'
+} else {
+      navMenuTogglerIMG.src = '/img/icons/icon--down.png';
+      }
+})
 
+
+
+
+
+/// h2 underline
 
 const h2 = document.querySelectorAll('h2');
 h2.forEach(item => {
@@ -36,7 +57,7 @@ content.appendChild(copyright);
 
 
 
-
+/// Create a collapsible and jump-to links for the topics of each page
 
 // Check the current page's filename
 const currentFilename = window.location.pathname.split('/').pop();
@@ -84,9 +105,9 @@ function createCollapsibleStructure() {
   
 } else {
         icon.src = '../../img/icons/icon--menu.png';
-        backBtn.style.left = '28px';
-     toTopBtn.style.left = '28px';
-     toBtmBtn.style.left = '60px';
+        backBtn.style.left = '48px';
+     toTopBtn.style.left = '35px';
+     toBtmBtn.style.left = '112px';
        backBtn.style.opacity = '1';
        toTopBtn.style.opacity = '1';
        toBtmBtn.style.opacity = '1';

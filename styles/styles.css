@@ -96,6 +96,18 @@ a:hover .nav__list-item {
 .site-logo {
     font-size: 20px;
     text-align: center;
+    color: rgb(187, 133, 246);
+    display: flex;
+    gap: 1rem;
+}
+
+.p05 {
+    padding: 0.5rem;
+}
+
+.border-round {
+    border: 1px solid #ffffff4a;
+    border-radius: 9999px;
 }
 
 .glass {
@@ -122,9 +134,10 @@ a:hover .nav__list-item {
     color: rgb(255, 255, 255);
     display: flex;
     gap: 0.5rem;
-    padding: 1.5rem;
-    background: rgb(131,58,180);
- background-image: linear-gradient(
+    padding: 6rem 0.2rem 1.5rem 1.5rem;
+    padding-top: 6rem;
+    background: rgb(30, 30, 36);
+ /*background-image: linear-gradient(
             55deg,
             hsl(276, 100%, 20%) 0%,
             hsl(264, 43%, 31%) 7%,
@@ -132,7 +145,7 @@ a:hover .nav__list-item {
             hsl(252, 35%, 33%) 24%,
             hsl(236, 44%, 45%) 34%
        
-    );    background-size: cover;
+    );    background-size: cover; */
     height: 100vh;
 }
 
@@ -142,10 +155,108 @@ a:hover .nav__list-item {
 }
 
 .nav {
-    width: 85px;
+    width: 150px;
     height: 100%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+
+.nav__menu-toggler {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+ /*border: 1px solid rgba(255, 255, 255, 0.146);*/
+ border: 0;
+ right: 8px;
+ bottom: 3px;
+ cursor: pointer;
+ border-radius: 10px;
+}
+
+.nav__menu-toggler:hover {
+    background-color: #b6b6b617;
+}
+
+.nav__menu-toggler > img {
+    width: 20px;
+  
+}
+
+.nav__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nav__list-item {
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.272);
+    width: fit-content;
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.nav__btns-wrap {
+    width: 100%;
+    display: flex;
+justify-content: space-between;}
+
+
+@media screen and (min-width: 630px) {
+    .nav__menu-toggler {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 630px) {
+    .nav__other-guides,
+    .nav__list {
+        display: none;
+    }
+
+    .nav {
+
+       
+            position: absolute;
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            top: 0;
+            background-color: #591cff47;
+            height: fit-content;
+            border-radius: 0px;
+            border-bottom-right-radius: 20px;
+            width: max-content;
+            padding: 1rem;
+            padding-right: 1rem;
+        
+    }
+
+    .collapsible--expanded {
+        top: 20px;
+    }
+    
+
+}
+
+.nav-expanded {
+    color: white;
+}
+
+.nav__other-guides {
+    border: 1px solid white;
+    font-size: 300px;
 }
 
 .content__list {
@@ -163,11 +274,15 @@ a:hover .nav__list-item {
 .content__list-item {
     border: 1px solid rgba(255, 255, 255, 0.272);
     width: 100%;
-    height: 80px;
-    padding: 0.4rem;
-    padding-top: 1.4rem;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0.8rem;
     border-radius: 0.7rem;
-    background-color: rgba(240, 248, 255, 0.084);
+    background-color: rgba(0, 0, 0, 0.05);
     font-size: 14px;
 }
 
@@ -222,27 +337,6 @@ a:hover .nav__list-item {
 }
 
 
-.nav__list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.nav__list-item {
-    border: 1px solid rgba(255, 255, 255, 0.272);
-    width: fit-content;
-    padding: 0.4rem;
-    border-radius: 0.7rem;
-    list-style-type: none;
-    font-size: 14px;
-}
-
-.nav__topic {
-    margin-bottom: 0;
-}
 
 /** CODE */
 
@@ -327,27 +421,49 @@ a:hover .nav__list-item {
     flex: 0 0 100%;
 }
 
+/*! Colors */
+/*^--------*/
+/*?--------*/
+/*@--------*/
+/**--------*/
+/*^/-------*/
+/*~--------*/
+/*&--------*/
 .comnt {
     color: rgb(123, 123, 123);
 }
-
 .orng {
     color: orange;
 }
-
 .grn {
     color: rgb(60, 162, 60);
 }
-
 .blu {
     color: rgb(74, 189, 255);
 }
+.red {
+    color: rgb(73, 0, 0)
+}
+.bright-red {
+    color: rgb(255, 44, 44);
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.204);
+    
+}
+/*! Colors */
+/*^--------*/
+/*?--------*/
+/*@--------*/
+/**--------*/
+/*^/-------*/
+/*~--------*/
+/*&--------*/
 
 h3 {
     color: #93d4f8;
     background-color: rgba(0, 123, 255, 0.186);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid rgba(0, 140, 255, 0.543);
     font-size: 16px;
     font-weight: 500;
@@ -356,28 +472,20 @@ h3 {
 h3.orng {
     color: #fcd392;
     background-color: rgba(255, 157, 0, 0.186);
-    padding: 10px;
-    border-radius: 10px;
     border: 1px solid rgba(255, 136, 0, 0.543);
 }
 
 h3.grn {
     color: #6eda80;
     background-color: rgba(0, 255, 17, 0.186);
-    padding: 10px;
-    border-radius: 10px;
     border: 1px solid rgba(0, 255, 68, 0.543);
 }
 
-.red {
-    color: rgb(73, 0, 0)
-}
 
 h3.red {
-    background-color: rgba(255, 0, 0, 0.483);
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgb(108, 0, 0);
+    color: rgb(255, 157, 157);
+    background-color: rgba(255, 0, 0, 0.257);
+    border: 1px solid rgb(199, 0, 0);
 }
 
 .copyright {
@@ -436,7 +544,7 @@ h3.red {
 /*^ '.collapsible' can be found in 'main.js' */
 
 .icon {
-   width: 20px;  
+   width: 28px;  
 }
 
 .icon-wrap {
@@ -448,25 +556,35 @@ h3.red {
 
 .home-icon-wrap {
     position: absolute;
-    left: 28px;
+    left: 24px;
+    top: 170px;
+}
+
+.home-icon {
+    padding: 0.4rem;
 }
 
 .back-icon-wrap {
     position: absolute;
-    left: 28px;
+    left: 57px;
     bottom: 18px;
     transition: opacity 0.5s ease;
+}
+
+.back-icon {
+    padding: 0 0.3rem 0 0.3rem ;
+    padding-top: 0.4rem;
 }
 
 .to-top-btn {
     border: 1px solid rgba(255, 255, 255, 0.272);
     padding: 0.4rem;
     border-radius: 30px;
-    width: 28px;
+    width: 34px;
 
     position: absolute;
-    left: 28px;
-    bottom: 80px;
+    left: 35px;
+    bottom: 82px;
     transform: rotateZ(90deg);
     transition: opacity 0.5s ease;
 
@@ -482,11 +600,11 @@ h3.red {
     border: 1px solid rgba(255, 255, 255, 0.272);
     padding: 0.4rem;
     border-radius: 30px;
-    width: 28px;
+    width: 34px;
 
     position: absolute;
-    bottom: 80px;
-    left: 60px;
+    bottom: 82px;
+    left: 112px;
     transform: rotateZ(-90deg);
     transition: opacity 0.5s ease;
 
@@ -501,13 +619,14 @@ h3.red {
     display: flex;
     flex-direction: row;
     width: fit-content;
+    height: 0px;
     border-radius: 40px;
     line-height: 1.47rem;
     background-color: #73737315;
     transition: border-radius 1s ease;
     position: absolute;
-    left: 35px;
-    top: 150px;
+    left: 65px;
+    top: 320px;
     
 }
 
@@ -525,6 +644,30 @@ h3.red {
     border-bottom-left-radius: 2px;
     direction: rtl;
     padding: 1rem;
+    top: 130px;
+    left: 30px;
+}
+
+@media screen and (max-width: 630px) {
+    .collapsible {
+        left: 230px;
+        top: 47px;
+    }
+    .collapsible--expanded {
+        top: 60px;
+        left: 20px;
+    }
+
+    .to-top-btn {
+        top: 5px;
+        left: unset;
+        right: 20px;
+    }
+    .to-bottom-btn {
+        top: 5px;
+        left: unset;
+        right: 65px;
+    }
 }
 
 
@@ -587,15 +730,15 @@ h3.red {
     transform: rotatex(-180deg);
     transition: transform 0.5s, background-color 0.3s;
     align-self: center;
-    width: 30px;
+    width: 38px;
     background-color:var(--color--btn);
     border-radius: 100px;
     border: 1px solid rgba(255, 255, 255, 0.302);
     cursor: pointer;
 
     position: absolute;
-    left: 8px;
-    top: -6px;
+    left: 6px;
+    top: -43px;
 
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -616,3 +759,9 @@ h3.red {
     top: 100%;
     transition: transform 0.32s;
 }
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+

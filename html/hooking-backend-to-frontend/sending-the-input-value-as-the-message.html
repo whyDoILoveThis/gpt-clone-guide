@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Sending the Input Value as the Message</title>
+  </head>
+  <body>
+    <article class="main-wrap">
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <div class="nav-wrap">
+        <aside class="nav box glass">
+          <header class="site-logo">
+            GPT Clone Guide<button class="nav__menu-toggler">
+              <img
+                class="nav__menu-toggler-img"
+                src="/img/icons/icon--down.png"
+                alt=""
+              />
+            </button>
+          </header>
+          <ul class="nav__list">
+            <div class="nav__btns-wrap">
+              <!--~-->
+              <!--* BACK BTN -->
+              <!--^-->
+              <li class="border-round">
+                <a class="icon-wrap" href="hooking-backend-to-frontend.html">
+                  <img
+                    src="/img/icons/icon--back.PNG"
+                    alt=""
+                    class="icon back-icon"
+                  />
+                </a>
+              </li>
+              <!--~-->
+              <!--* HOME BTN -->
+              <!--^-->
+              <li class="border-round">
+                <a href="/index.html">
+                  <img
+                    src="/img/icons/icon--home.png"
+                    alt=""
+                    class="icon home-icon"
+                  />
+                </a>
+              </li>
+            </div>
+            <li
+              style="
+                margin: 0.5rem;
+                margin-top: 2rem;
+                font-size: 16px;
+                border: 0;
+                border-bottom: 1px solid white;
+                text-align: center;
+              "
+              class="nav__other-guides"
+            >
+              Other&nbsp;Guides
+            </li>
+            <a href="">
+              <li class="nav__list-item">MERN Social App</li>
+            </a>
+          </ul>
+        </aside>
+      </div>
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <!--!-->
+      <section class="content-area box glass">
+        <div class="content">
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+          <h1>Sending the Input Value as the Message</h1>
+          <!--topic-->
+          <h2>Save GPT Response to State</h2>
+          <h3>
+            The first thing we want to do is go ahead and save the whole
+            response object to state
+          </h3>
+          <div class="box">
+            <h4>Let's go ahead and import useState and useEffect...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/import-usestate-and-useeffect.PNG"
+              alt=""
+            />
+            <h4>Now if we want to save the message we can say...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/msg-state.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">
+            What we want to do next, is store the message from gpt to the
+            message state var.
+          </h3>
+          <div class="box">
+            <h4>
+              So we go into the data, get the choices, select the first item of
+              the choices array, and get the message object in that array.
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/set-msg.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="box grn">
+            If we inspect the data obj in the dev tool, we can see exactly where
+            this is coming from.
+            <br />
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/message-object-location-in-dev-tool.gif"
+              alt=""
+            />
+            <br />
+            Notice the path that we see when we hover over message...
+            <br />
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/notice-on-hover-devtool.PNG"
+              alt=""
+            />
+          </h3>
+          <h3 class="orng">
+            💡 So the message is actually an object that has the content and the
+            role.
+          </h3>
+          <h3>We want to save both.</h3>
+          <div class="box">
+            <h4>
+              So remove that console log, and we should be left with this in the
+              try...
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/try-as-of-now.PNG"
+              alt=""
+            />
+          </div>
+          <h2>Hooking Up the Input</h2>
+          <div class="box">
+            <h4>Let's create a new state for the inputValue.</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/inputvalue-state.PNG"
+              alt=""
+            />
+          </div>
+          <h3>
+            What we are going to do is setInputValue when we interact with the
+            input.
+          </h3>
+          <div class="box">
+            <h4>
+              First off, we display whatever the inputValue is right now...(we
+              initialized to null)...
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/input-value.PNG"
+              alt=""
+            />
+            <h4>
+              For the onChange, we pass an event param func, and setInputValue
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/onchange.PNG"
+              alt=""
+            />
+            <h4>Now we can console.log the input value...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/log-the-inputvalue.PNG"
+              alt=""
+            />
+            <h4>
+              And whenever we interact with the input, the value is stored.
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/input-stored-example-in-console.gif"
+              alt=""
+            />
+          </div>
+          <h3 class="grn">
+            So that is how we are changing the inputValue state var.
+          </h3>
+          <h3 class="orng">
+            The next thing we want to do is take that state and send it to the
+            gpt api when the user submits.
+          </h3>
+          <h2>Sending Over the Current InputValue</h2>
+          <div class="box">
+            <h4>All we do is set the message to the inputValue...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/set-the-message-to-the-inputvalue.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="box grn">
+            So, we are passing this through the body...
+            <br />
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/passing-thru-the-body.PNG"
+              alt=""
+            />
+            Then we want to pass that message to our backend...
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/pass-the-message-to-the-backend.PNG"
+              alt=""
+            />
+            Our message will now get sent to openAI👏
+            <br />
+            <br />
+            💣🤯🧨
+            <br />
+            You must have this for it to work❗❗
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/musthavethis.PNG"
+              alt=""
+            />
+          </h3>
+          <h2>Test What We Have</h2>
+          <div class="box">
+            <h4>Now we can console log the message to test everything...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/console-log-the-msg.PNG"
+              alt=""
+            />
+            <h4>
+              If you type a message and send it, you will see message the object
+              from the openAI response in the console...
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/send-msg.PNG"
+              alt=""
+            />
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/msg-in-console.PNG"
+              alt=""
+            />
+            <h4>This is a response from chatGPT!!</h4>
+          </div>
+          <h3 class="grn">
+            Next, we will use this message object to create a list item and
+            display it in our app.
+          </h3>
+          <div class="box">
+            <h4>First we need a place to store all the messages...</h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/sending-the-input-value-as-the-message/"
+              alt=""
+            />
+          </div>
+          <!--~-->
+          <!--* ACTUAL CONTENT -->
+          <!--^-->
+        </div>
+      </section>
+    </article>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>
