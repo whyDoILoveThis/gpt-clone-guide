@@ -61,7 +61,10 @@ content.appendChild(copyright);
 
 // Check the current page's filename
 const currentFilename = window.location.pathname.split('/').pop();
-if (currentFilename !== 'index.html' && currentFilename !== 'getting-started-ui-setup.html' && currentFilename !== 'backend-with-node-js.html' && currentFilename !== 'hooking-backend-to-frontend.html') {
+if (currentFilename !== 'index.html'
+ && currentFilename !== 'getting-started-ui-setup.html'
+  && currentFilename !== 'backend-with-node-js.html'
+   && currentFilename !== 'hooking-backend-to-frontend.html') {
     createCollapsibleStructure();
 }
 
@@ -82,7 +85,7 @@ function createCollapsibleStructure() {
 
   // Create the icon for collapsing/expanding
   const icon = document.createElement('img');
-  icon.src = '../../img/icons/icon--menu.png';
+  icon.src = '/img/icons/icon--menu.png';
   icon.alt = '';
   icon.classList.add('sections-icon', 'collapsible__button');
   heading.appendChild(icon);
@@ -92,7 +95,7 @@ function createCollapsibleStructure() {
     const toTopBtn = document.querySelector('.to-top-btn');
     const toBtmBtn = document.querySelector('.to-bottom-btn');
     if(!collapsible.classList.contains('collapsible--expanded')){ 
-      icon.src = '../../img/icons/icon--close.png'
+      icon.src = '/img/icons/icon--close.png'
       icon.classList.add('close-btn');
    backBtn.style.opacity = '0';
    toTopBtn.style.opacity = '0';
@@ -104,7 +107,7 @@ function createCollapsibleStructure() {
    }, 300);
   
 } else {
-        icon.src = '../../img/icons/icon--menu.png';
+        icon.src = '/img/icons/icon--menu.png';
         backBtn.style.left = '48px';
      toTopBtn.style.left = '35px';
      toBtmBtn.style.left = '112px';
@@ -195,17 +198,18 @@ const toTopIcon = document.createElement("img");
 const toTopLink = document.createElement("a");
 const theTopOfPage = document.createElement('span');
 const h1 = document.querySelector('h1');
-toTopIcon.src = "../../img/icons/icon--back.PNG";
+toTopIcon.src = "/img/icons/icon--back.PNG";
 
 const toBottomIcon = document.createElement("img");
 const toBottomLink = document.createElement("a");
 const theBottomOfPage = document.createElement('span');
-toBottomIcon.src = "../../img/icons/icon--back.PNG";
+toBottomIcon.src = "/img/icons/icon--back.PNG";
 
 if (currentFilename !== 'index.html'
      && currentFilename !== 'getting-started-ui-setup.html'
      && currentFilename !== 'backend-with-node-js.html'
-     && currentFilename !== 'hooking-backend-to-frontend.html') {
+     && currentFilename !== 'hooking-backend-to-frontend.html'
+     && currentFilename !== 'getting-started.html') {
 // JUMP-TO-TOP BUTTON
 theTopOfPage.id = "top"
 h1.appendChild(theTopOfPage);

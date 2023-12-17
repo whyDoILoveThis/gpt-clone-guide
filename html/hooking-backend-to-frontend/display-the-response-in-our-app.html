@@ -64,8 +64,8 @@
             >
               Other&nbsp;Guides
             </li>
-            <a href="">
-              <li class="nav__list-item">MERN Social App</li>
+            <a href="/projects/Social-Media-App/index.html">
+              <li class="nav__list-item">Social Media App</li>
             </a>
           </ul>
         </aside>
@@ -131,6 +131,46 @@
             />
           </div>
           <h2>Create Logic for Setting Chat Title</h2>
+          <h3 class="grn">This should be easy to undersand.</h3>
+          <div class="box">
+            <h4>
+              If there is not a currentTitle, and an inputValue exists, and a
+              message has come back, then setCurrentTitle to the inputValue...
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/set-title-if.PNG"
+              alt=""
+            />
+            <h4>
+              HOWEVER, if a currentTitle already exists, and we are typing and
+              recieving chat responses, we want to be saving those responses.
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/saving-response-if.PNG"
+              alt=""
+            />
+            <h4>
+              So, when setting the previous chats we need to open the array and
+              spread the existing values. Then we will add two new objects to
+              it.
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/two-new-objs.PNG"
+              alt=""
+            />
+            <h4>
+              The first object is setting the title, role and the content to our
+              input value.
+              <br />
+              <br />
+              The second object is setting the title, the role, and content to
+              the values found in the message object of the fetch response.
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/"
+              alt=""
+            />
+          </div>
           <!--~-->
           <!--* ACTUAL CONTENT -->
           <!--^-->
