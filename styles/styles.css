@@ -9,28 +9,23 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html a {
+html * {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    outline: none !important;
+   
 }
 
 
 h1 {
     text-align: center;
     margin: 4rem 1rem 3rem 1rem;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 h2 {
     text-align: center;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 8rem;
 }
 
@@ -38,7 +33,8 @@ h4 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
+    color: #e8e8e8;
 }
 
 em {
@@ -111,6 +107,10 @@ a:hover .nav__list-item {
     border-radius: 9999px;
 }
 
+.border-round:hover {
+    background-color: #cbcbcb22;
+}
+
 .glass {
     background-color: rgba(75, 75, 75, 0.291);
     backdrop-filter: blur(50px);
@@ -174,10 +174,12 @@ a:hover .nav__list-item {
  bottom: 3px;
  cursor: pointer;
  border-radius: 10px;
+ background-color: #b6b6b617;
+
 }
 
 .nav__menu-toggler:hover {
-    background-color: #b6b6b617;
+    background-color: #b6b6b625;
 }
 
 .nav__menu-toggler > img {
@@ -563,6 +565,7 @@ h3.red {
 
 .home-icon {
     padding: 0.4rem;
+    padding-bottom: 0.2rem;
 }
 
 .back-icon-wrap {
@@ -573,8 +576,7 @@ h3.red {
 }
 
 .back-icon {
-    padding: 0 0.3rem 0 0.3rem ;
-    padding-top: 0.4rem;
+    padding: 0.37rem 0.3rem 0 0.3rem ;
 }
 
 .to-top-btn {
@@ -638,8 +640,8 @@ h3.red {
     max-height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.302);
     background-color: rgba(75, 75, 75, 0.101);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     transition:  background-color 2s ease;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
@@ -675,7 +677,6 @@ h3.red {
 .close-btn {
     margin-top: 0.5rem;
 }
-
 
 
 
@@ -736,23 +737,18 @@ h3.red {
     border-radius: 100px;
     border: 1px solid rgba(255, 255, 255, 0.302);
     cursor: pointer;
-
     position: absolute;
     left: 6px;
     top: -43px;
+    background-color: rgba(43, 43, 43, 0.901);
+}
 
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    outline: none !important;
+.collapsible__button.close-btn:hover {
+    background-color: #444343;
 }
 
 .collapsible__button:hover {
-    background-color: rgba(255, 255, 255, 0.080);
+    background-color: #4c2d7580;
 }
 
 .collapsible--expanded .collapsible__button {

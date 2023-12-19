@@ -62,9 +62,10 @@ content.appendChild(copyright);
 // Check the current page's filename
 const currentFilename = window.location.pathname.split('/').pop();
 if (currentFilename !== 'index.html'
- && currentFilename !== 'getting-started-ui-setup.html'
+  && currentFilename !== 'getting-started-ui-setup.html'
   && currentFilename !== 'backend-with-node-js.html'
-   && currentFilename !== 'hooking-backend-to-frontend.html') {
+  && currentFilename !== 'hooking-backend-to-frontend.html'
+  && currentFilename !== 'getting-started.html') {
     createCollapsibleStructure();
 }
 
@@ -107,6 +108,7 @@ function createCollapsibleStructure() {
    }, 300);
   
 } else {
+  icon.classList.remove('close-btn');
         icon.src = '/img/icons/icon--menu.png';
         backBtn.style.left = '48px';
      toTopBtn.style.left = '35px';
@@ -114,7 +116,6 @@ function createCollapsibleStructure() {
        backBtn.style.opacity = '1';
        toTopBtn.style.opacity = '1';
        toBtmBtn.style.opacity = '1';
-        icon.classList.remove('close-btn');
     }
   })
 

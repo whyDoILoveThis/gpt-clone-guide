@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/styles.css" />
-    <title>Project Setup</title>
+    <title>Group the Chats with a Title</title>
   </head>
   <body>
     <article class="main-wrap">
@@ -79,7 +79,7 @@
           <!--~-->
           <!--* ACTUAL CONTENT -->
           <!--^-->
-          <h1>Display the Response in Our App</h1>
+          <h1>Group the Chats with a Title</h1>
           <!--topic-->
           <h2>Save the Previous Chats</h2>
           <div class="box">
@@ -88,7 +88,7 @@
               array...
             </h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/previous-chats.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/previous-chats.PNG"
               alt=""
             />
           </div>
@@ -100,7 +100,7 @@
           <div class="box">
             <h4>Let's start with a use effect...</h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/useeffect.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/useeffect.PNG"
               alt=""
             />
             <h4>
@@ -108,7 +108,7 @@
               is the response from chatGPT)...
             </h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/message-useeffect.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/message-useeffect.PNG"
               alt=""
             />
           </div>
@@ -116,21 +116,21 @@
           <div class="box">
             <h4>We also want a place to save the current title...</h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/currenttitle.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/currenttitle.PNG"
               alt=""
             />
             <h4>And add it to the end of the useeffect too...</h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/currenttitle-useeffect.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/currenttitle-useeffect.PNG"
               alt=""
             />
             <h4>Then do a console.log of these...</h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/console-log-in-useeffect.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/console-log-in-useeffect.PNG"
               alt=""
             />
           </div>
-          <h2>Create Logic for Setting Chat Title</h2>
+          <h2>Create Logic for Grouping Chats and Setting Chat Title</h2>
           <h3 class="grn">This should be easy to undersand.</h3>
           <div class="box">
             <h4>
@@ -138,7 +138,7 @@
               message has come back, then setCurrentTitle to the inputValue...
             </h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/set-title-if.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/set-title-if.PNG"
               alt=""
             />
             <h4>
@@ -146,7 +146,7 @@
               recieving chat responses, we want to be saving those responses.
             </h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/saving-response-if.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/saving-response-if.PNG"
               alt=""
             />
             <h4>
@@ -155,7 +155,7 @@
               it.
             </h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/two-new-objs.PNG"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/two-new-objs.PNG"
               alt=""
             />
             <h4>
@@ -167,10 +167,60 @@
               the values found in the message object of the fetch response.
             </h4>
             <img
-              src="../../img/hooking-backend-to-frontend/display-the-response-in-our-app/"
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/new-obj-for-arr.PNG"
               alt=""
             />
           </div>
+          <h2>Test What We Have</h2>
+          <h3 class="grn box">
+            First we need to change the initialization of the currentTitle to
+            null...
+            <img
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/current-title-null.PNG"
+              alt=""
+            />
+            Then we can console.log the previousChats...
+            <img
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/console-log-previousChats.PNG"
+              alt=""
+            />
+          </h3>
+          <div class="box">
+            <h4>
+              Now if you send a message you will get an array in the console
+              containing the objects that hold the information about the
+              question you asked and the response you got back...
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/the-response.PNG"
+              alt=""
+            />
+            <h4>
+              And if you keep asking more questions, the coresponding objects
+              will be added to the array...
+            </h4>
+            <img
+              src="../../img/hooking-backend-to-frontend/group-the-chats-with-a-title/double-response.PNG"
+              alt=""
+            />
+          </div>
+          <h3 class="orng">
+            You probably notice that it's not remembering the previous question,
+            we will get to that.
+          </h3>
+          <h2>We Have Made Great Progress!!</h2>
+          <h3 class="grn">
+            🎉🎊Great!! We are sending messages, getting responses, and grouping
+            them together with a title!!
+          </h3>
+          <h3>
+            Next we are going to set up the new chat button to clear the title
+            so we can start a new conversation.
+          </h3>
+          <h3 class="grn">
+            So head back to the homepage and start the new chat section of this
+            guide.
+          </h3>
           <!--~-->
           <!--* ACTUAL CONTENT -->
           <!--^-->
